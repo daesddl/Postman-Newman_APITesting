@@ -1,0 +1,16 @@
+{
+  "name": "assessment-2",
+  "version": "1.0.0",
+  "description": "Second Assessment",
+  "main": "index.js",
+  "scripts": {
+    "testAPI": "newman run ./todoist/tests/api/Collection/todoist.postman_collection.json -e ./todoist/tests/api/envVariables/QA.postman_environment.json -r htmlextra --reporter-htmlextra-export ./todoist/tests/api/reports/todoistAPITestReport.html",
+    "testAPI_POSTMAN_API_KEY":"newman run https://api.getpostman.com/collections/733b6b74-00cb-4fda-929f-c2896b0399f4?apikey=PMAK-60594f2dcccf430042f62048-1b7a752f0638f9c56c9549c0ba94b493ef --environment https://api.getpostman.com/environments/91c15963-d4b6-4929-bb5f-90f3e39af260?apikey=PMAK-60594f2dcccf430042f62048-1b7a752f0638f9c56c9549c0ba94b493ef -r htmlextra --reporter-htmlextra-export ./todoist/tests/api/reports/todoistAPITestReport_POSTMAN_API_KEY.html"
+  },
+  "author": "Daniel Espinosa",
+  "license": "ISC",
+  "dependencies": {
+    "newman": "^5.2.2",
+    "newman-reporter-htmlextra": "^1.20.1"
+  }
+}
